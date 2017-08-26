@@ -1,0 +1,54 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Roboto';
+
+$claro: #ccc;
+$preto: #000;
+$branco: #fff;
+$escuro: #333;
+$red: #F00;
+$clarinho: #f1f1f1;
+$texto: Montserrat, Verdana, Tahoma;
+$titulo: Roboto, Tahoma;
+$corpadraoescuro: #0c0482;
+$fundoportifolio: #ececec;
+$azulmenu: #0c0482;
+
+* { margin: 0px; padding: 0px; text-decoration: none; box-sizing: border-box;} /*para definir tudo como padrao e o (*) serve para tudo o que vc for colocar na tela*/
+header{
+    float: left;
+    padding: 0px;
+
+}
+body {
+    padding:0px;
+    margin:0px;
+    background-color: #fff;
+    font-size: 62.5%;
+    background: #fff;
+}
+.conteudo-centro {
+  width: 100%;
+}
+.conteudo-centro > img{
+  width: 100%;
+  float: left;
+  padding: 0px 2px;
+  height: auto;
+}
+.conteudo-centro h1{
+  font-size: 1.7em;
+}
+.data-publicacao p {
+  font-size: 1.0em;
+  float: right;
+}
+.preve-descricao p {
+  margin-top: 10px;
+  text-align: justify;
+}
+.redes-sociais > a{
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+.redes-sociais {
+  border-bottom: 1px solid #ccc;
+}
