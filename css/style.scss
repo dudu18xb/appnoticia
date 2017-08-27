@@ -26,29 +26,138 @@ body {
     background: #fff;
 }
 .conteudo-centro {
-  width: 100%;
+    width: 100%;
 }
 .conteudo-centro > img{
-  width: 100%;
-  float: left;
-  padding: 0px 2px;
-  height: auto;
+    width: 100%;
+    float: left;
+    padding: 0px 0px;
+    height: auto;
 }
 .conteudo-centro h1{
-  font-size: 1.7em;
+    font-size: 1.7em;
 }
-.data-publicacao p {
-  font-size: 1.0em;
-  float: right;
+.data-publicacao > p {
+    font-size: 1.0em;
+    background: #004786;
+    padding: 6px 5px;
+    color: #fff;
+    float: right;
+    margin-bottom: 0px;
 }
 .preve-descricao p {
-  margin-top: 10px;
-  text-align: justify;
+    margin-top: 10px;
+    float: left;
+    text-align: justify;
 }
 .redes-sociais > a{
-  margin-top: 10px;
-  font-size: 0.8em;
+    margin-top: 10px;
+    font-size: 0.8em;
 }
 .redes-sociais {
-  border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.preve-descricao.home {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+}
+.centro-erro > img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.centro-erro {
+    width: 100%;
+}
+.container.erro{
+    background: #000;
+    padding-bottom: 213px;
+}
+.container.erro button{
+    margin: 0px 100px 0px 100px;
+}
+.container.erro h3{
+    color: #fff;
+    text-align: center;
+}
+.tituloconteudo{
+    background: #000000;
+    color: #fff;
+    margin-top: 6px;
+    padding: 5px 0px 5px 0px;
+}
+.btn-padrao-app {
+    background-color: #004786 !important;
+    border-color: #004786 !important;
+    font-weight: 600 !important;
+}
+// rodape do menu
+.menu-fixo-rodape ul {
+    float: left; 
+}
+.menu-fixo-rodape li {
+    position: relative;
+    float: left;
+}
+.menu-fixo-rodape > ul > li > a {
+    color: #ffffff;
+    background: #000;
+    text-decoration: none;
+    padding: 12px 10px;
+    float: left;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #fff;
+}
+.menu-fixo-rodape {
+    margin-top: 10px;
+}
+// estilizando o headers
+.mh-head {
+    background: #000 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 1.4em !important;
+}
+.mh-head a:hover {
+    color: #ffffff !important;
+}
+.mm-menu .mm-navbar a, .mm-menu .mm-navbar>* {
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 1.3em !important;
+}
+.mm-listview > li > a {
+    color: #fff !important;
+}
+.mm-listview>li, .mm-listview>li .mm-next, .mm-listview>li .mm-next:before, .mm-listview>li:after {   
+    color: #fff !important;
+}
+.mm-listview>li {
+    border-color: #fff !important;
+}
+.mm-navbar {
+    border-bottom: 1px solid #fff !important;
+}
+.mm-menu .mm-listview>li .mm-next:after {
+    border-color: #fff !important;
+}
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
+    border-color: #fff !important;
+}
+.mm-menu {
+    background: #000 !important;
+    border-color: #fff !important;
+    color: #000 !important;
+}
+.breadcrumb {
+    background-color: #004786 !important;
+    margin-top: 10px !important;
+}
+.breadcrumb>li {
+    color: #fff !important;
+}
+.breadcrumb a {
+    color: #000 !important;
 }

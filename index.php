@@ -48,10 +48,13 @@
             _gaq.push(['_setAccount', 'UA-42119746-1']);
             _gaq.push(['_trackPageview']);
 
-            (function() {
-              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
             })();
         </script>
     </head>
@@ -64,47 +67,60 @@
                 </span>
                 <span class="mh-text"><i class="fa fa-newspaper-o"></i> Notícias</span>
             </div>
+
+            <!-- centro de conteudo -->
             <div class="container">
-                <div class="content conteudo-centro data-publicacao">
-                  <h1>No Eposido 104, Goku terá uma nova transformação</h1>
-                  <p>Publicado: 19/08/2017</p>
-                  <img src="images/img.jpg" />
-                  <div class="preve-descricao">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem lacus. Donec fermentum accumsan neque sed malesuada.
-                    </p>
-                    <button class="btn btn-primary">Visualizar</button>
-                  </div>
-                  <div class="redes-sociais">
-                    <!-- facebook -->
-                    <a class="btn btn-block btn-social btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
-                        <span class="fa fa-facebook"></span> Compartilhar
-                    </a>
-                    <!-- twitter -->
-                    <a class="btn btn-block btn-social btn-twitter" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-twitter']);">
-                        <span class="fa fa-twitter"></span> Twitter
-                    </a>
-                    <a class="btn btn-block btn-social btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
-                        <span class="fa fa-google"></span> Google+
-                    </a>
-                  </div>
-                </div>
-                <!-- separando os dois conteudos -->
-                <div class="content conteudo-centro data-publicacao">
-                  <h1>No Eposido 104, Goku terá uma nova transformação</h1>
-                  <p>Publicado: 19/08/2017</p>
-                  <img src="images/img.jpg" />
-                  <div class="preve-descricao">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem lacus. Donec fermentum accumsan neque sed malesuada.
-                    </p>
-                  </div>
-                </div>
+                <?php
+                //print_r( $_GET );
+
+                if (isset($_GET["p"])) {
+                    //se o parametro p existe
+                    $p = trim($_GET["p"]);
+
+                    //separar por / produto/111
+                    //pagina - produto
+                    //codigo - 111
+                    $p = explode("/", $p);
+
+                    //print_r ( $p );
+                    $pagina = $p[0]; //nome da página
+                } else {
+
+                    $pagina = "home";
+                }
+
+                $pagina = "pages/$pagina.php";
+
+                if (file_exists($pagina))
+                    include $pagina;
+                else
+                    include "pages/erro.php";
+                ?>
+            </div>
+            <!-- final centro de conteudo -->
+            <div class="menu-fixo-rodape">
+                <ul>
+                    <li>
+                        <a href="home">
+                            <i class="fa fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-folder"></i> Categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-search"></i> Buscar
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <nav id="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home">Home</a></li>
                     <li><span>About us</span>
                         <ul>
                             <li><a href="#about/history">History</a></li>
@@ -125,37 +141,9 @@
     </div>
 
     <main>
-        <?php
-        //print_r( $_GET );
 
-        if (isset($_GET["p"])) {
-            //se o parametro p existe
-            $p = trim($_GET["p"]);
-
-            //separar por / produto/111
-            //pagina - produto
-            //codigo - 111
-            $p = explode("/", $p);
-
-            //print_r ( $p );
-            $pagina = $p[0]; //nome da página
-        } else {
-
-            $pagina = "home";
-        }
-
-        $pagina = "pages/$pagina.php";
-
-        if (file_exists($pagina))
-            include $pagina;
-        else
-            include "pages/erro.php";
-        ?>
     </main>
     <!-- RODAPE -->
-    <footer>
-
-    </footer>
 
 </body>
 </html>
