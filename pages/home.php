@@ -11,7 +11,7 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem lacus. Donec fermentum accumsan neque sed malesuada.
             </p>
-            <button class="btn btn-primary btn-padrao-app">Visualizar</button>
+            <a href="leitura" class="btn btn-primary btn-padrao-app">Visualizar</a>
         </div>
     </div>
     <!-- final do content -->
@@ -24,7 +24,7 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem lacus. Donec fermentum accumsan neque sed malesuada.
             </p>
-            <button class="btn btn-primary btn-padrao-app">Visualizar</button>
+            <a href="leitura" class="btn btn-primary btn-padrao-app">Visualizar</a>
         </div>
     </div>
     <!-- final do content -->
